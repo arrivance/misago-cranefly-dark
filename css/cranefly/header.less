@@ -1,0 +1,174 @@
+// Primary header
+// -------------------------
+.header-primary {
+  background-color: @pageHeaderBackground;
+  border-bottom: 1px solid @pageHeaderBorder;
+  margin: 0px;
+  margin-top: 0px;
+  padding-top: @baseLineHeight / 2;
+
+  .breadcrumb {
+    background: none;
+    border: none;
+    margin: 0px;
+    margin-bottom: @fontSizeSmall * -0.5;
+    padding: 0px;
+
+    li {
+      font-size: @fontSizeSmall;
+      font-weight: bold;
+      text-shadow: none;
+
+      a:link, a:visited {
+        color: @grayLighter;
+      }
+
+      a:hover, a:active {
+        color: @grayLighter;
+      }
+
+      .divider {
+        color: @grayLight
+      }
+    }
+  }
+
+  h1 {
+    color: @grayLighter;
+    font-size: @fontSizeLarge * 2;
+    font-weight: normal;
+  }
+
+  .header-stats {
+    overflow: visible;
+    margin-bottom: 0px;
+
+    color: @grayLight;
+
+    li {
+      float: left;
+      margin-right: @baseFontSize;
+
+      .thread-prefix {
+        margin-left: 2px;
+        position: relative;
+        bottom: 1px;
+      }
+
+      &>a:not(.label) {
+        color: @grayLight;
+
+        &:hover, &:active {
+          color: @textColor;
+        }
+      }
+
+      &>i {
+        .opacity(50);
+      }
+
+      &.stats-form {
+        float: right;
+
+        form {
+          margin: 0px;
+          margin-bottom: -12px;
+          padding: 0px;
+
+          button {
+            position: relative;
+            bottom: 12px;
+
+            &>i {
+              position: relative;
+              top: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-tabs {
+    border-bottom: 0px;
+    margin: 0px;
+    margin-top: (@baseLineHeight  * -0.5);
+    position: relative;
+    top: (@baseLineHeight * 0.5) - 1px;
+
+    li {
+      a {
+        &:link, &:visited {
+          border: none;
+          border-radius: 0px;
+          margin-bottom: 4px;
+          padding: (@baseLineHeight / 3) (@baseLineHeight / 2);
+
+          color: lighten(@gray, 20%);
+          font-weight: bold;
+          border-color: transparent;
+          background-color: @bodyBackground; 
+        }
+
+        &:hover, &:active, a:focus {
+          background-color: @bodyBackground; 
+          border-bottom: 4px solid @blue;
+          margin-bottom: 0px;
+
+          color: @blue; 
+        }
+      }
+
+      &.active {
+        a:link, a:visited, a:hover, a:active {
+          background: none;
+          border-bottom: 4px solid @red;
+          margin-bottom: 0px;
+
+          color: @textColor;
+        }
+      }
+
+      &.pull-right {
+      	margin-left: @baseFontSize;
+      }
+
+      .form-inline {
+        margin: 0px;
+        margin-bottom: 7px;
+
+        .btn-icon {
+          padding-left: 7px;
+          padding-right: 7px;
+        }
+
+        i {
+          position: relative;
+          top: 0px;
+        }
+      }
+
+      & {
+        a.btn {
+          border: 1px solid transparent;
+          *border: 0; // Remove the border to prevent IE7's black border on input:focus
+          border-radius: @baseBorderRadius;
+          margin: 0px;
+          padding: 4px 12px;
+
+          i {
+            position: relative;
+            top: 0px;
+          }
+
+          &:visited, &:hover {
+            background-color: @gray;
+            border-color: transparent;
+
+            color: @grayDark;
+          }
+        }
+      }
+    }
+  }
+}

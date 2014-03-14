@@ -1,0 +1,79 @@
+// Layout classess
+// -------------------------
+
+html, body {
+  height: 100%;
+}
+
+a{ 
+  color: lighten(@blue, 10%); 
+}
+
+a:hover, a:active, a:visited{ 
+  color: lighten(@blue, 15%); 
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto ((@footerHeight * -1) - @baseFontSize + 2px);
+  background-color: @grayDarker; 
+
+  .container-primary {
+    padding-top: @baseLineHeight;
+    padding-bottom: @footerHeight + (@baseLineHeight * 1.5);
+
+    .page-description {
+      margin-bottom: @baseLineHeight;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid @grayDark;
+    }
+  }
+}
+
+// Footer
+// -------------------------
+footer {
+  background-color: @footerBackground;
+  height: @footerHeight;
+  padding: @paddingLarge;
+  padding-bottom: 0px;
+
+  .container {
+    hr {
+      border-color: transparent;
+      border-bottom: 1px solid @grayDark;
+      margin: (@baseLineHeight / 2) 0px;
+    }
+
+    .credits {
+      p {
+        margin-bottom: 0px;
+
+        color: @grayLighter;
+        font-size: 90%;
+
+        a:link, a:active, a:visited, a:hover {
+          color: @grayLighter; 
+        }
+      }
+    }
+  }
+}
+
+// Selection
+// -------------------------
+::selection {
+  background: @orange;
+
+  color: @grayLighter; 
+}
+::-moz-selection {
+  background: @orange;
+
+  color: @grayLighter; 
+}

@@ -1,0 +1,24 @@
+td{ 
+	background-color: @grayDark; 
+	color: @grayLighter; 
+
+	&.span3{ 
+		background-color: @grayDark; 
+	}
+}
+
+.table-striped {
+  tbody {
+    > tr:nth-child(odd) > td,
+    > tr:nth-child(odd) > th{ 
+      background-color: @grayDark; 
+      color: @grayLighter; 
+    } 
+
+    > tr:nth-child(even) > td, 
+    > tr:nth-child(even) > th {
+      background-color: @grayDarker; 
+      color: @grayLighter; 
+      } 
+    }
+  }
